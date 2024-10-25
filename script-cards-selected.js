@@ -125,6 +125,6 @@ const itens = [
     new Item('Curso Didático', '40 aulas teóricas (presencial ou online)', '800,00', 'ab', 'false'),
     new Item('Prova téorica', 'Marcação da prova teórica', '231,46', 'ab', 'false'),
     new Item('Aluguel Veículo', 'Aluguel do veículo das aulas práticas', '420,00', 'abcd', 'true'),
-    new Item('Aulas Práticas', 'Aulas práticas de direção', '680,00', 'abcd', 'true'),
+    new Item('Aulas Práticas', '40 Aulas práticas de direção', '680,00', 'abcd', 'true'),
     new Item('Marcação Exame', 'Marcação exame de direção', '330,00', 'abcd', 'true'),
 ];
