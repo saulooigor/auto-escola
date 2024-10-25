@@ -69,11 +69,11 @@
 
 .btn-simnao{
     background-color: transparent;
-    border: .3rem solid black;
+    border: .3rem solid;
     border-radius: .8rem;
 }
 
-.btn-simnao:hover{
+.btn-simnao:hover, .selected-simnao{
     background-color: black;
     color: white;
 }

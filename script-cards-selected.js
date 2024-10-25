@@ -1,13 +1,33 @@
-
-
+// Funcionalidade para os cards de categorias
 $('.card-option').click(function() {
     $('.card-option').removeClass('selected');
+    $('.btn-simnao').removeClass('selected-simnao');
+    $('.container-itens').empty();
     $(this).toggleClass('selected');
 
-    var categoria = $(this).attr('categoria');
-    var selector = '.item-list';
+    $('html, body').animate({
+        scrollTop: $('#infoAdicional').offset().top
+    }, 100);
+});
+
+// Funcionalidade para os botões de sim e não
+$('.btn-simnao').click(function() {
+    $('.btn-simnao').removeClass('selected-simnao');
+    $(this).toggleClass('selected-simnao');
+
+    $('html, body').animate({
+        scrollTop: $('#itensLista').offset().top
+    }, 100);
+
+    var valor = $(this).attr('data-valor');
+
+    var categoria = $('.card-option').filter('.selected').attr('categoria');
 
     var itensSelecionados = itens.filter(item => item.categoria.includes(categoria));
+
+    if (valor === 'true') {
+        itensSelecionados = itensSelecionados.filter(item => item.habilitado === 'true');
+    }
 
     renderizarItens(itensSelecionados, categoria);
 
@@ -32,13 +52,14 @@ $('.card-option').click(function() {
     $('.item-list').removeClass('show');
         
     // Mostra os itens da lista um a um com um atraso
-    $(selector).each(function(index) {
+    $('.item-list').each(function(index) {
         setTimeout(function() {
-            $(selector).eq(index).addClass('show');
+            $('.item-list').eq(index).addClass('show');
         }, (index + 1) * 300); // Ajuste o tempo de atraso conforme necessário
     });
 });
 
+// Função para mudar as cores da listagem e itens da carteira
 mudarCores = function(cor, backgroundColor) {
     $('.icon-list').css({
         color: cor,
@@ -52,6 +73,7 @@ mudarCores = function(cor, backgroundColor) {
     });
 }
 
+// Função para renderizar os itens na lista
 renderizarItens = function(itens, categoria) {
     const container = $('.container-itens');
     container.empty(); // Limpa o conteúdo existente
@@ -84,22 +106,25 @@ renderizarItens = function(itens, categoria) {
     });
 }
 
+//Classe de Item dos dados
 class Item {
-    constructor(nome, descricao, preco, categoria) {
+    constructor(nome, descricao, preco, categoria, habilitado) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
         this.categoria = categoria;
+        this.habilitado = habilitado;
     }
 }
 
+// Itens de exemplo
 const itens = [
-    new Item('Taxa de Inscrição', 'Inscrição incial para cadastro no DETRAN', '100,00', 'abcd'),
-    new Item('Exame Psicotécnico', 'Exame realizado em clínica credenciada', '237,00', 'abcd'),
-    new Item('Exame Médico', 'Exame realizado em clínica credenciada', '367,98', 'abcd'),
-    new Item('Curso Didático', '40 aulas teóricas (presencial ou online)', '800,00', 'ab'),
-    new Item('Prova téorica', 'Marcação da prova teórica', '231,46', 'ab'),
-    new Item('Aluguel Veículo', 'Aluguel do veículo das aulas práticas', '420,00', 'abcd'),
-    new Item('Aulas Práticas', 'Aulas práticas de direção', '680,00', 'abcd'),
-    new Item('Marcação Exame', 'Marcação exame de direção', '330,00', 'abcd')
+    new Item('Taxa de Inscrição', 'Inscrição incial para cadastro no DETRAN', '100,00', 'abcd', 'true'),
+    new Item('Exame Psicotécnico', 'Exame realizado em clínica credenciada', '237,00', 'abcd', 'true'),
+    new Item('Exame Médico', 'Exame realizado em clínica credenciada', '367,98', 'abcd', 'true'),
+    new Item('Curso Didático', '40 aulas teóricas (presencial ou online)', '800,00', 'ab', 'false'),
+    new Item('Prova téorica', 'Marcação da prova teórica', '231,46', 'ab', 'false'),
+    new Item('Aluguel Veículo', 'Aluguel do veículo das aulas práticas', '420,00', 'abcd', 'true'),
+    new Item('Aulas Práticas', 'Aulas práticas de direção', '680,00', 'abcd', 'true'),
+    new Item('Marcação Exame', 'Marcação exame de direção', '330,00', 'abcd', 'true'),
 ];
