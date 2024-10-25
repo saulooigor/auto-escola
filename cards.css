@@ -41,19 +41,19 @@
 }
 
 .categoria-a{
-    background-image: url('../sauloalves_frwk/Downloads/cat-a.jpg');
+    background-image: url('images/cat-a.jpg');
 }
 
 .categoria-b{
-    background-image: url('../sauloalves_frwk/Downloads/cat-b.jpg');
+    background-image: url('images/cat-b.jpg');
 }
 
 .categoria-c{
-    background-image: url('../sauloalves_frwk/Downloads/cat-c.jpg');
+    background-image: url('images/cat-c.jpg');
 }
 
 .categoria-d{
-    background-image: url('../sauloalves_frwk/Downloads/cat-d.jpg');
+    background-image: url('images/cat-d.jpg');
 }
 
 .item-list {
@@ -65,4 +65,15 @@
 .item-list.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+.btn-simnao{
+    background-color: transparent;
+    border: .3rem solid black;
+    border-radius: .8rem;
+}
+
+.btn-simnao:hover{
+    background-color: black;
+    color: white;
 }
