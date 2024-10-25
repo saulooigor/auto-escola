@@ -1,0 +1,207 @@
+<html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Bootstrap</title>
+    <link rel="stylesheet" href="cards.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=done_outline" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mb-2">
+        <h1 class="mt-5">Olá, Bootstrap!</h1>
+        <p class="lead">Este é um exemplo simples de uma estrutura HTML usando Bootstrap.</p>
+    </div>
+    <!-- Cards com opções de categorias -->
+    <div class="container p-3 text-center my-2">
+        <div class="row gx-3 gy-5">
+            <div class="col-md-3">
+                <div class="p-3 card-option categoria-a" categoria="a"><h3><b>CATEGORIA <br> A</b></h3></div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 card-option categoria-b" categoria="b"><h3><b>CATEGORIA <br> B</b></h3></div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 card-option categoria-c" categoria="c"><h3><b>CATEGORIA <br> C</b></h3></div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 card-option categoria-d" categoria="d"><h3><b>CATEGORIA <br> D</b></h3></div>
+            </div>
+        </div>
+    </div>
+    <!-- Listagem de itens com valores -->
+    <!-- <div class="container my-5">
+        <div class="row row-cols-md-2 g-5 container-itens">
+            <div class="row my-1 item-list px-4 py-1" categorias="abcd">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined icon-list">
+                        done_outline
+                    </span>
+                </div>
+                <div class="col-8 px-4">
+                    <h2>
+                        <b class="gabarito">Taxa de Inscrição</b>
+                        <p><i class="lead">Inscrição incial para cadastro no DETRAN</i></p>
+                    </h2>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-center preco-item">
+                    <p class="mr-1">R$</p>
+                    <h2>
+                        <b>100,00</b>
+                    </h2>
+                </div>
+                <hr class="mt-3">
+            </div>
+            <div class="row my-1 item-list px-4 py-1" categorias="abcd">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined icon-list">
+                        done_outline
+                    </span>
+                </div>
+                <div class="col-8 px-4">
+                    <h2>
+                        <b class="gabarito">Exame Psicotécnico</b>
+                        <p><i class="lead">Exame realizado em clínica credenciada</i></p>
+                    </h2>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-center preco-item">
+                    <p class="mr-1">R$</p>
+                    <h2>
+                        <b>237,00</b>
+                    </h2>
+                </div>
+                <hr class="mt-3">
+            </div>
+            <div class="row my-1 item-list px-4 py-1" categorias="abcd">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined icon-list">
+                        done_outline
+                    </span>
+                </div>
+                <div class="col-8 px-4">
+                    <h2>
+                        <b class="gabarito">Exame Médico</b>
+                        <p><i class="lead">Exame realizado em clínica credenciada</i></p>
+                    </h2>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-center preco-item">
+                    <p class="mr-1">R$</p>
+                    <h2>
+                        <b>367,98</b>
+                    </h2>
+                </div>
+                <hr class="mt-3">
+            </div>
+            <div class="row my-1 item-list px-4 py-1" categorias="ab">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined icon-list">
+                        done_outline
+                    </span>
+                </div>
+                <div class="col-8 px-4">
+                    <h2>
+                        <b class="gabarito">Curso Didático</b>
+                        <p><i class="lead">40 aulas teóricas (presencial ou online)</i></p>
+                    </h2>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-center preco-item">
+                    <p class="mr-1">R$</p>
+                    <h2>
+                        <b>800,00</b>
+                    </h2>
+                </div>
+                <hr class="mt-3">
+            </div>
+            <div class="row my-1 item-list px-4 py-1" categorias="ab">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined icon-list">
+                        done_outline
+                    </span>
+                </div>
+                <div class="col-8 px-4">
+                    <h2>
+                        <b class="gabarito">Prova téorica</b>
+                        <p><i class="lead">Marcação da prova teórica</i></p>
+                    </h2>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-center preco-item">
+                    <p class="mr-1">R$</p>
+                    <h2>
+                        <b>231,46</b>
+                    </h2>
+                </div>
+                <hr class="mt-3">
+            </div>
+            <div class="row my-1 item-list px-4 py-1" categorias="abcd">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined icon-list">
+                        done_outline
+                    </span>
+                </div>
+                <div class="col-8 px-4">
+                    <h2>
+                        <b class="gabarito">Aluguel Veículo</b>
+                        <p><i class="lead">Aluguel do veículo das aulas práticas</i></p>
+                    </h2>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-center preco-item">
+                    <p class="mr-1">R$</p>
+                    <h2>
+                        <b>420,00</b>
+                    </h2>
+                </div>
+                <hr class="mt-3">
+            </div>
+            <div class="row my-1 item-list px-4 py-1" categorias="abcd">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined icon-list">
+                        done_outline
+                    </span>
+                </div>
+                <div class="col-8 px-4">
+                    <h2>
+                        <b class="gabarito">Aulas Práticas</b>
+                        <p><i class="lead">Aulas práticas de direção</i></p>
+                    </h2>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-center preco-item">
+                    <p class="mr-1">R$</p>
+                    <h2>
+                        <b>680,00</b>
+                    </h2>
+                </div>
+                <hr class="mt-3">
+            </div>
+            <div class="row my-1 item-list px-4 py-1" categorias="abcd">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <span class="material-symbols-outlined icon-list">
+                        done_outline
+                    </span>
+                </div>
+                <div class="col-8 px-4">
+                    <h2>
+                        <b class="gabarito">Marcação Exame</b>
+                        <p><i class="lead">Marcação	exame de direção</i></p>
+                    </h2>
+                </div>
+                <div class="col-md-3 d-flex align-items-center justify-content-center preco-item">
+                    <p class="mr-1">R$</p>
+                    <h2>
+                        <b>330,00</b>
+                    </h2>
+                </div>
+                <hr class="mt-3">
+            </div>
+        </div>
+    </div> -->
+    <div class="container my-5"><div class="row row-cols-md-2 g-5 container-itens"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="script-cards-selected.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
